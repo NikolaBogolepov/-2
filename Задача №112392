@@ -1,0 +1,10 @@
+f = open('input.txt')
+g = open('output.txt', 'w')
+s = [int(i) for i in f.read().split()]
+s = [i for i in s if (i > 0 and i % 2 == 0)]
+if s != []:
+    print(str(min(s))+' '+str(max(s)), file=g)
+else:
+    print('0', file=g)
+f.close()
+g.close()
